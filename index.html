@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اكتشف السر: كيف تربح 300 جنيه يومياً بمجرد مشاهدة الريلز؟</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Framer Motion for Animation -->
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      color: #e6e6e6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* لمعان خفيف متحرك بالخلفية */
+    .bg-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
+      z-index: -1;
+    }
+
+    /* تأثيرات النص */
+    .text-glow {
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+
+    /* لمعان الزر */
+    .glow-btn {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glow-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .glow-btn:hover::before {
+      left: 100%;
+    }
+
+    .glow-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
+    }
+
+    /* بطاقة الميزات */
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    /* شهادة المستخدم */
+    .testimonial {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      border-left: 4px solid #3b82f6;
+    }
+
+    /* فواصل زخرفية */
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent);
+      margin: 2rem 0;
+    }
+
+    /* نجمة متحركة */
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-glow"></div>
+  
+  <!-- إضافة نجوم متحركة -->
+  <div id="stars-container"></div>
+
+  <div class="container px-4 py-8">
+    <div id="app" class="relative z-10 text-center">
+      <motion.div 
+        initial="{ opacity: 0, y: 40 }" 
+        animate="{ opacity: 1, y: 0 }" 
+        transition="{ duration: 1 }"
+        class="flex flex-col items-center"
+      >
+        <!-- الصورة -->
+        <div class="relative mb-8">
+          <img src="https://www2.0zz0.com/2025/10/27/14/387896114.jpg" 
+               alt="صورة التطبيق" 
+               class="w-72 md:w-96 rounded-2xl shadow-2xl border border-gray-700"/>
+          <div class="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+            جديد!
+          </div>
+        </div>
+
+        <!-- العنوان الرئيسي -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-relaxed text-glow">
+          اكتشف السر: كيف تربح <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">300 جنيه يومياً</span> بمجرد مشاهدة الريلز؟ 📱
+        </h1>
+        
+        <!-- العنوان الفرعي -->
+        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
+          طريقة مضمونة لا تحتاج إلى خبرة سابقة. ابدأ الآن واستفد من وقت فراغك!
+        </p>
+
+        <!-- إحصائيات -->
+        <div class="flex flex-wrap justify-center gap-6 mb-8">
+          <div class="flex flex-col items-center">
+            <div class="text-2xl font-bold text-blue-400">+15,000</div>
+            <div class="text-gray-400">مستخدم نشط</div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="text-2xl font-bold text-purple-400">4.8</div>
+            <div class="text-gray-400">تقييم التطبيق</div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="text-2xl font-bold text-green-400">EGP 9M+</div>
+            <div class="text-gray-400">مدفوعة للمستخدمين</div>
+          </div>
+        </div>
+
+        <!-- الزر الرئيسي -->
+        <a href="https://sp.funtv.ai/share?lang=ar&channel_id=988681&r_id=988681" target="_blank"
+           class="glow-btn text-white font-semibold px-8 py-4 rounded-full text-lg mb-12 inline-flex items-center">
+          ابدأ الربح الآن
+          <i class="fas fa-arrow-left mr-2"></i>
+        </a>
+      </motion.div>
+
+      <!-- فواصل -->
+      <div class="divider"></div>
+
+      <!-- الميزات -->
+      <motion.div 
+        initial="{ opacity: 0 }" 
+        animate="{ opacity: 1 }" 
+        transition="{ duration: 1, delay: 0.5 }"
+        class="mb-16"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">لماذا تختارنا؟</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="feature-card p-6">
+            <div class="text-blue-400 text-3xl mb-4">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">سهل وسريع</h3>
+            <p class="text-gray-400">لا تحتاج إلى خبرة سابقة، فقط قم بتحميل التطبيق وابدأ فوراً.</p>
+          </div>
+          
+          <div class="feature-card p-6">
+            <div class="text-green-400 text-3xl mb-4">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">آمن ومضمون</h3>
+            <p class="text-gray-400">دفعات يومية مضمونة مع حماية كاملة لبياناتك الشخصية.</p>
+          </div>
+          
+          <div class="feature-card p-6">
+            <div class="text-purple-400 text-3xl mb-4">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">مرن في الوقت</h3>
+            <p class="text-gray-400">اعمل في أي وقت يناسبك، حتى أثناء فترات الراحة.</p>
+          </div>
+        </div>
+      </motion.div>
+
+      <!-- فواصل -->
+      <div class="divider"></div>
+
+      <!-- خطوات العمل -->
+      <motion.div 
+        initial="{ opacity: 0 }" 
+        animate="{ opacity: 1 }" 
+        transition="{ duration: 1, delay: 0.7 }"
+        class="mb-16"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">كيف تبدأ؟</h2>
+        
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div class="flex flex-col items-center text-center max-w-xs">
+            <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">1</div>
+            <h3 class="text-xl font-bold mb-2">سجل حسابك</h3>
+            <p class="text-gray-400">قم بإنشاء حساب مجاني في دقائق معدودة</p>
+          </div>
+          
+          <div class="text-blue-400 text-2xl hidden md:block">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          
+          <div class="flex flex-col items-center text-center max-w-xs">
+            <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">2</div>
+            <h3 class="text-xl font-bold mb-2">شاهد الريلز</h3>
+            <p class="text-gray-400">تصفح الريلز المثيرة للاهتمام واحصل على نقاط</p>
+          </div>
+          
+          <div class="text-blue-400 text-2xl hidden md:block">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          
+          <div class="flex flex-col items-center text-center max-w-xs">
+            <div class="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">3</div>
+            <h3 class="text-xl font-bold mb-2">اسحب أرباحك</h3>
+            <p class="text-gray-400">احصل على أموالك مباشرة إلى محفظتك الإلكترونية</p>
+          </div>
+        </div>
+      </motion.div>
+
+      <!-- فواصل -->
+      <div class="divider"></div>
+
+      <!-- شهادات المستخدمين -->
+      <motion.div 
+        initial="{ opacity: 0 }" 
+        animate="{ opacity: 1 }" 
+        transition="{ duration: 1, delay: 0.9 }"
+        class="mb-16"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">ماذا يقول مستخدمونا؟</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div class="testimonial p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">م</div>
+              <div class="mr-4">
+                <div class="font-bold">محمد أحمد</div>
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300">"لقد غير هذا التطبيق حياتي! الآن أستغل وقت فراغي في كسب دخل إضافي. في الأسبوع الأول فقط ربحت 1500 جنيه!"</p>
+          </div>
+          
+          <div class="testimonial p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">س</div>
+              <div class="mr-4">
+                <div class="font-bold">سارة محمود</div>
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300">"كنت متشككة في البداية، لكن بعد تجربته اكتشفت أنه حقيقي! الدفعات تصل يومياً دون أي مشاكل."</p>
+          </div>
+        </div>
+      </motion.div>
+
+      <!-- فواصل -->
+      <div class="divider"></div>
+
+      <!-- قسم الأسئلة الشائعة -->
+      <motion.div 
+        initial="{ opacity: 0 }" 
+        animate="{ opacity: 1 }" 
+        transition="{ duration: 1, delay: 1.1 }"
+        class="mb-16"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">الأسئلة الشائعة</h2>
+        
+        <div class="max-w-3xl mx-auto text-right">
+          <div class="mb-6 pb-4 border-b border-gray-700">
+            <h3 class="text-xl font-bold mb-2">كم من الوقت أحتاج لربح 300 جنيه يومياً؟</h3>
+            <p class="text-gray-400">معظم المستخدمين يحققون هذا الهدف خلال 2-3 ساعات يومياً من التصفح العادي.</p>
+          </div>
+          
+          <div class="mb-6 pb-4 border-b border-gray-700">
+            <h3 class="text-xl font-bold mb-2">هل هناك أي رسوم للاشتراك؟</h3>
+            <p class="text-gray-400">لا، التطبيق مجاني بالكامل ولا توجد أي رسوم خفية.</p>
+          </div>
+          
+          <div class="mb-6 pb-4 border-b border-gray-700">
+            <h3 class="text-xl font-bold mb-2">كيف يتم الدفع؟</h3>
+            <p class="text-gray-400">نقدم دفعات يومية عبر محافظ إلكترونية متعددة مثل فودافون كاش وأورانج كاش.</p>
+          </div>
+        </div>
+      </motion.div>
+
+      <!-- دعوة للعمل النهائية -->
+      <motion.div 
+        initial="{ opacity: 0, y: 20 }" 
+        animate="{ opacity: 1, y: 0 }" 
+        transition="{ duration: 1, delay: 1.3 }"
+        class="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 mb-8"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">لا تضيع الفرصة!</h2>
+        <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+          انضم إلى آلاف المستخدمين الذين غيروا طريقة كسبهم للمال. ابدأ الآن واستفد من وقتك في تحقيق دخل إضافي.
+        </p>
+        <a href="https://example.com" target="_blank"
+           class="glow-btn text-white font-semibold px-8 py-4 rounded-full text-lg inline-flex items-center">
+          ابدأ الربح الآن
+          <i class="fas fa-arrow-left mr-2"></i>
+        </a>
+      </motion.div>
+
+      <!-- التذييل -->
+      <footer class="text-gray-500 text-sm pt-8 border-t border-gray-800">
+        <p>©2025 جميع الحقوق محفوظة. .</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- تفعيل Framer Motion -->
+  <script>
+    const { motion } = window['framer-motion'];
+    
+    // إضافة النجوم المتحركة
+    document.addEventListener('DOMContentLoaded', function() {
+      const starsContainer = document.getElementById('stars-container');
+      const starsCount = 50;
+      
+      for (let i = 0; i < starsCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        
+        // حجم عشوائي للنجوم
+        const size = Math.random() * 3 + 1;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        
+        // موقع عشوائي
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        
+        // تأخير عشوائي للحركة
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        
+        starsContainer.appendChild(star);
+      }
+    });
+  </script>
+</body>
+</html>
